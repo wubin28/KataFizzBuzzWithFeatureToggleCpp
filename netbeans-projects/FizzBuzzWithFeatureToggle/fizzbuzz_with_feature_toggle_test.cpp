@@ -37,6 +37,11 @@ TEST_F(FizzBuzzWithFeatureToggleTest, When1Then1) {
   EXPECT_EQ("1", fizzBuzzHandler.handle(1));
 }
 
+TEST_F(FizzBuzzWithFeatureToggleTest, When3ThenFizz) {
+    FizzBuzzHandler fizzBuzzHandler;
+    EXPECT_EQ("Fizz", fizzBuzzHandler.handle(3));
+}
+
 }  // namespace
 
 
