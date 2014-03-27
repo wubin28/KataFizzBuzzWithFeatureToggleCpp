@@ -65,7 +65,7 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/fizzbuzzwithfeaturetoggle: ${OBJECTFI
 ${OBJECTDIR}/fizzbuzz_with_feature_toggle_test.o: fizzbuzz_with_feature_toggle_test.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/fizzbuzz_with_feature_toggle_test.o fizzbuzz_with_feature_toggle_test.cpp
+	$(COMPILE.cc) -g -I../../gtest-1.7.0 -I../../gtest-1.7.0/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/fizzbuzz_with_feature_toggle_test.o fizzbuzz_with_feature_toggle_test.cpp
 
 # Subprojects
 .build-subprojects:
