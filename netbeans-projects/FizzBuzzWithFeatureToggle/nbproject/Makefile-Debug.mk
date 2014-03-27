@@ -34,7 +34,8 @@ include Makefile
 OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
-OBJECTFILES=
+OBJECTFILES= \
+	${OBJECTDIR}/fizzbuzz_with_feature_toggle_test.o
 
 
 # C Compiler Flags
@@ -59,7 +60,12 @@ LDLIBSOPTIONS=
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/fizzbuzzwithfeaturetoggle: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/fizzbuzzwithfeaturetoggle ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/fizzbuzzwithfeaturetoggle ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/fizzbuzz_with_feature_toggle_test.o: fizzbuzz_with_feature_toggle_test.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/fizzbuzz_with_feature_toggle_test.o fizzbuzz_with_feature_toggle_test.cpp
 
 # Subprojects
 .build-subprojects:

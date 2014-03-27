@@ -12,6 +12,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>fizzbuzz_with_feature_toggle_test.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -35,6 +36,11 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="fizzbuzz_with_feature_toggle_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
     </conf>
     <conf name="Release" type="1">
       <toolsSet>
@@ -56,6 +62,11 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="fizzbuzz_with_feature_toggle_test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>
