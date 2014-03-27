@@ -62,7 +62,7 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/fizzbuzzwithfeaturetoggle: ../googlet
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/fizzbuzzwithfeaturetoggle: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/fizzbuzzwithfeaturetoggle ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/fizzbuzzwithfeaturetoggle ${OBJECTFILES} ${LDLIBSOPTIONS} -lpthread
 
 ${OBJECTDIR}/fizzbuzz_with_feature_toggle_test.o: fizzbuzz_with_feature_toggle_test.cpp 
 	${MKDIR} -p ${OBJECTDIR}

@@ -57,6 +57,7 @@
               </makeArtifact>
             </linkerLibProjectItem>
           </linkerLibItems>
+          <commandLine>-lpthread</commandLine>
         </linkerTool>
       </compileType>
       <item path="fizzbuzz_with_feature_toggle.h" ex="false" tool="3" flavor2="0">
@@ -105,6 +106,7 @@
               </makeArtifact>
             </linkerLibProjectItem>
           </linkerLibItems>
+          <commandLine>-lpthread</commandLine>
         </linkerTool>
       </compileType>
       <item path="fizzbuzz_with_feature_toggle.h" ex="false" tool="3" flavor2="0">
