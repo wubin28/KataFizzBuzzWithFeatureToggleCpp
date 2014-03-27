@@ -52,11 +52,13 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=
+LDLIBSOPTIONS=../googletest/dist/Debug/GNU-Linux-x86/libgoogletest.a
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/fizzbuzzwithfeaturetoggle
+
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/fizzbuzzwithfeaturetoggle: ../googletest/dist/Debug/GNU-Linux-x86/libgoogletest.a
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/fizzbuzzwithfeaturetoggle: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
@@ -69,6 +71,7 @@ ${OBJECTDIR}/fizzbuzz_with_feature_toggle_test.o: fizzbuzz_with_feature_toggle_t
 
 # Subprojects
 .build-subprojects:
+	cd ../googletest && ${MAKE}  -f Makefile CONF=Debug
 
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
@@ -77,6 +80,7 @@ ${OBJECTDIR}/fizzbuzz_with_feature_toggle_test.o: fizzbuzz_with_feature_toggle_t
 
 # Subprojects
 .clean-subprojects:
+	cd ../googletest && ${MAKE}  -f Makefile CONF=Debug clean
 
 # Enable dependency checking
 .dep.inc: .depcheck-impl
