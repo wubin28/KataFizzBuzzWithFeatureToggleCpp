@@ -10,5 +10,5 @@ string FizzBuzzHandler::handle(int number) {
     if (number == 15) {
         return "FizzBuzz";
     }
-    return "1";
+    return std::to_string(number);
 }

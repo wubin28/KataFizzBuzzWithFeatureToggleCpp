@@ -42,6 +42,7 @@
             <pElem>../../gtest-1.7.0</pElem>
             <pElem>../../gtest-1.7.0/include</pElem>
           </incDir>
+          <commandLine>-std=c++11</commandLine>
         </ccTool>
         <linkerTool>
           <linkerLibItems>
@@ -87,6 +88,7 @@
             <pElem>../../gtest-1.7.0</pElem>
             <pElem>../../gtest-1.7.0/include</pElem>
           </incDir>
+          <commandLine>-std=c++11</commandLine>
         </ccTool>
         <fortranCompilerTool>
           <developmentMode>5</developmentMode>
