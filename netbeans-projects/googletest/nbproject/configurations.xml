@@ -34,6 +34,12 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>../../gtest-1.7.0</pElem>
+            <pElem>../../gtest-1.7.0/include</pElem>
+          </incDir>
+        </ccTool>
         <archiverTool>
         </archiverTool>
       </compileType>
@@ -50,6 +56,10 @@
         </cTool>
         <ccTool>
           <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>../../gtest-1.7.0</pElem>
+            <pElem>../../gtest-1.7.0/include</pElem>
+          </incDir>
         </ccTool>
         <fortranCompilerTool>
           <developmentMode>5</developmentMode>
