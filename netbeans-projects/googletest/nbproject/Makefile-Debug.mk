@@ -34,7 +34,9 @@ include Makefile
 OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
-OBJECTFILES=
+OBJECTFILES= \
+	${OBJECTDIR}/_ext/275589469/gtest-all.o \
+	${OBJECTDIR}/_ext/275589469/gtest_main.o
 
 
 # C Compiler Flags
@@ -62,6 +64,16 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libgoogletest.a: ${OBJECTFILES}
 	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libgoogletest.a
 	${AR} -rv ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libgoogletest.a ${OBJECTFILES} 
 	$(RANLIB) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libgoogletest.a
+
+${OBJECTDIR}/_ext/275589469/gtest-all.o: ../../gtest-1.7.0/src/gtest-all.cc 
+	${MKDIR} -p ${OBJECTDIR}/_ext/275589469
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I../../gtest-1.7.0 -I../../gtest-1.7.0/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/275589469/gtest-all.o ../../gtest-1.7.0/src/gtest-all.cc
+
+${OBJECTDIR}/_ext/275589469/gtest_main.o: ../../gtest-1.7.0/src/gtest_main.cc 
+	${MKDIR} -p ${OBJECTDIR}/_ext/275589469
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I../../gtest-1.7.0 -I../../gtest-1.7.0/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/275589469/gtest_main.o ../../gtest-1.7.0/src/gtest_main.cc
 
 # Subprojects
 .build-subprojects:

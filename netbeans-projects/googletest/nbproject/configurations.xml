@@ -24,6 +24,8 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>../../gtest-1.7.0/src/gtest-all.cc</itemPath>
+    <itemPath>../../gtest-1.7.0/src/gtest_main.cc</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -43,6 +45,13 @@
         <archiverTool>
         </archiverTool>
       </compileType>
+      <item path="../../gtest-1.7.0/src/gtest-all.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../gtest-1.7.0/src/gtest_main.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
     </conf>
     <conf name="Release" type="3">
       <toolsSet>
@@ -70,6 +79,13 @@
         <archiverTool>
         </archiverTool>
       </compileType>
+      <item path="../../gtest-1.7.0/src/gtest-all.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../gtest-1.7.0/src/gtest_main.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>
