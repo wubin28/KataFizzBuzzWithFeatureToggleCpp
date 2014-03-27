@@ -10,5 +10,8 @@
 
 #include "gtest/gtest.h"
 
+class FizzBuzzHandler {
+    
+};
 #endif	/* FIZZBUZZ_WITH_FEATURE_TOGGLE_H */
 
