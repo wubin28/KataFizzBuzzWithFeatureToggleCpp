@@ -12,6 +12,8 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>../../gtest-1.7.0/src/gtest-all.cc</itemPath>
+      <itemPath>../../gtest-1.7.0/src/gtest_main.cc</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -24,8 +26,6 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
-    <itemPath>../../gtest-1.7.0/src/gtest-all.cc</itemPath>
-    <itemPath>../../gtest-1.7.0/src/gtest_main.cc</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

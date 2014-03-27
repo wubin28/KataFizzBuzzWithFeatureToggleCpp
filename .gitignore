@@ -11,3 +11,5 @@
 *.lai
 *.la
 *.a
+/netbeans-projects/googletest/build/
+/netbeans-projects/googletest/dist/
