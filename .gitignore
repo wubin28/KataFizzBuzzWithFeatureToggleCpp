@@ -13,3 +13,4 @@
 *.a
 /netbeans-projects/googletest/build/
 /netbeans-projects/googletest/dist/
+/netbeans-projects/FizzBuzzWithFeatureToggle/build/
