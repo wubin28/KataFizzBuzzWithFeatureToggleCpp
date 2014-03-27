@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/fizzbuzz_with_feature_toggle.o \
 	${OBJECTDIR}/fizzbuzz_with_feature_toggle_test.o
 
 
@@ -63,6 +64,11 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/fizzbuzzwithfeaturetoggle: ../googlet
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/fizzbuzzwithfeaturetoggle: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/fizzbuzzwithfeaturetoggle ${OBJECTFILES} ${LDLIBSOPTIONS} -lpthread
+
+${OBJECTDIR}/fizzbuzz_with_feature_toggle.o: fizzbuzz_with_feature_toggle.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -I../../gtest-1.7.0 -I../../gtest-1.7.0/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/fizzbuzz_with_feature_toggle.o fizzbuzz_with_feature_toggle.cpp
 
 ${OBJECTDIR}/fizzbuzz_with_feature_toggle_test.o: fizzbuzz_with_feature_toggle_test.cpp 
 	${MKDIR} -p ${OBJECTDIR}
