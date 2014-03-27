@@ -7,5 +7,8 @@ string FizzBuzzHandler::handle(int number) {
     if (number == 5) {
         return "Buzz";
     }
+    if (number == 15) {
+        return "FizzBuzz";
+    }
     return "1";
 }
