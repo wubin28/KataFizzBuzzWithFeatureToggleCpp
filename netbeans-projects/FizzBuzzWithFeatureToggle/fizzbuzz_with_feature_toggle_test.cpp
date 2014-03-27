@@ -36,8 +36,10 @@ protected:
   // Objects declared here can be used by all tests in the test case for FizzBuzzWithFeatureToggle.
 };
 
-TEST_F(FizzBuzzWithFeatureToggleTest, When1Then1) {
+TEST_F(FizzBuzzWithFeatureToggleTest, WhenCommonNumberThenSayItDirectly) {
     EXPECT_EQ("1", ptrFizzBuzzHandler->handle(1));
+    EXPECT_EQ("2", ptrFizzBuzzHandler->handle(2));
+    EXPECT_EQ("16", ptrFizzBuzzHandler->handle(16));
 }
 
 TEST_F(FizzBuzzWithFeatureToggleTest, When3ThenFizz) {
