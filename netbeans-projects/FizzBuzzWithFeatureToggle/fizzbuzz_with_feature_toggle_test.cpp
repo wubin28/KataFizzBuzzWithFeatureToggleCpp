@@ -32,7 +32,7 @@ protected:
   // Objects declared here can be used by all tests in the test case for FizzBuzzWithFeatureToggle.
 };
 
-TEST_F(FizzBuzz, When1Then1) {
+TEST_F(FizzBuzzWithFeatureToggleTest, When1Then1) {
   FizzBuzzHandler fizzBuzzHandler;
   EXPECT_EQ("1", fizzBuzzHandler.handle(1));
 }
