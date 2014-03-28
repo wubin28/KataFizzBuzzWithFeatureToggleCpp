@@ -52,8 +52,9 @@ TEST_F(FizzBuzzWithFeatureToggleTest, WhenMultipleOf5ThenBuzz) {
     EXPECT_EQ("Buzz", ptrFizzBuzzHandler->handle(100));
 }
 
-TEST_F(FizzBuzzWithFeatureToggleTest, When15ThenFizzBuzz) {
+TEST_F(FizzBuzzWithFeatureToggleTest, WhenMultipleOf15ThenFizzBuzz) {
     EXPECT_EQ("FizzBuzz", ptrFizzBuzzHandler->handle(15));
+    EXPECT_EQ("FizzBuzz", ptrFizzBuzzHandler->handle(90));
 }
 
 }  // namespace
