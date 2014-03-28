@@ -12,7 +12,8 @@ protected:
 
   FizzBuzzWithFeatureToggleTest() {
       // You can do set-up work for each test here.
-      ptrGameHandler = new FizzBuzzHandlerProxy;
+      FizzBuzzHandler *ptrFizzBuzzHandler = new FizzBuzzHandler;
+      ptrGameHandler = new FizzBuzzHandlerProxy(ptrFizzBuzzHandler);
   }
 
   virtual ~FizzBuzzWithFeatureToggleTest() {
@@ -36,29 +37,29 @@ protected:
 };
 
 TEST_F(FizzBuzzWithFeatureToggleTest, WhenCommonNumberThenSayItDirectly) {
-    EXPECT_EQ("1", ptrFizzBuzzHandler->handle(1));
-    EXPECT_EQ("2", ptrFizzBuzzHandler->handle(2));
-    EXPECT_EQ("16", ptrFizzBuzzHandler->handle(16));
+    EXPECT_EQ("1", ptrGameHandler->handle(1));
+    EXPECT_EQ("2", ptrGameHandler->handle(2));
+    EXPECT_EQ("16", ptrGameHandler->handle(16));
 }
 
 TEST_F(FizzBuzzWithFeatureToggleTest, WhenMultipleOf3ThenFizz) {
-    EXPECT_EQ("Fizz", ptrFizzBuzzHandler->handle(3));
-    EXPECT_EQ("Fizz", ptrFizzBuzzHandler->handle(99));
+    EXPECT_EQ("Fizz", ptrGameHandler->handle(3));
+    EXPECT_EQ("Fizz", ptrGameHandler->handle(99));
 }
 
 TEST_F(FizzBuzzWithFeatureToggleTest, WhenMultipleOf5ThenBuzz) {
-    EXPECT_EQ("Buzz", ptrFizzBuzzHandler->handle(5));
-    EXPECT_EQ("Buzz", ptrFizzBuzzHandler->handle(100));
+    EXPECT_EQ("Buzz", ptrGameHandler->handle(5));
+    EXPECT_EQ("Buzz", ptrGameHandler->handle(100));
 }
 
 TEST_F(FizzBuzzWithFeatureToggleTest, WhenMultipleOf15ThenFizzBuzz) {
-    EXPECT_EQ("FizzBuzz", ptrFizzBuzzHandler->handle(15));
-    EXPECT_EQ("FizzBuzz", ptrFizzBuzzHandler->handle(90));
+    EXPECT_EQ("FizzBuzz", ptrGameHandler->handle(15));
+    EXPECT_EQ("FizzBuzz", ptrGameHandler->handle(90));
 }
 
 TEST_F(FizzBuzzWithFeatureToggleTest, GivenBodyMovementIsOnWhenMultipleOf3ThenFizzAndTouchHead) {
-    EXPECT_EQ("FizzAndTouchHead", ptrFizzBuzzHandler->handle(3));
-    EXPECT_EQ("FizzAndTouchHead", ptrFizzBuzzHandler->handle(99));
+    EXPECT_EQ("FizzAndTouchHead", ptrGameHandler->handle(3));
+    EXPECT_EQ("FizzAndTouchHead", ptrGameHandler->handle(99));
 }
 
 }  // namespace
