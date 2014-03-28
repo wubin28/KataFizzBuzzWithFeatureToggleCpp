@@ -16,7 +16,7 @@ using std::string;
 class GameHandler {
 public:
     virtual string handle(int number) = 0;
-    static const bool isBodyMovementFeatureToggleOn = 1;
+    static const bool isBodyMovementFeatureToggleOn = 0;
 };
 
 class FizzBuzzHandler {
