@@ -62,15 +62,25 @@ TEST_F(FizzBuzzWithFeatureToggleTest, GivenBodyMovementIsOnWhenMultipleOf3ThenFi
     EXPECT_EQ("FizzAndTouchHead", ptrGameHandler->handle(99));
 }
 
+TEST_F(FizzBuzzWithFeatureToggleTest, GivenBodyMovementIsOnWhenMultipleOf5ThenBuzzAndTouchShoulder) {
+    EXPECT_EQ("FizzAndTouchShoulder", ptrGameHandler->handle(5));
+    EXPECT_EQ("FizzAndTouchShoulder", ptrGameHandler->handle(100));
+}
+
+TEST_F(FizzBuzzWithFeatureToggleTest, GivenBodyMovementIsOnWhenMultipleOf15ThenFizzAndTouchKnee) {
+    EXPECT_EQ("FizzAndTouchKnee", ptrGameHandler->handle(15));
+    EXPECT_EQ("FizzAndTouchKnee", ptrGameHandler->handle(90));
+}
+
 }  // namespace
 
 
 GTEST_API_ int main(int argc, char **argv) {
     printf("Running main() from gtest_main.cc\n");
     if (GameHandler::isBodyMovementFeatureToggleOn) {
-        testing::GTEST_FLAG(filter) = "FizzBuzzWithFeatureToggleTest.GivenBodyMovement*";
+        testing::GTEST_FLAG(filter) = "FizzBuzzWithFeatureToggleTest.WhenCommonNumber*:FizzBuzzWithFeatureToggleTest.GivenBodyMovement*";
     } else {
-        testing::GTEST_FLAG(filter) = "FizzBuzzWithFeatureToggleTest.When*";
+        testing::GTEST_FLAG(filter) = "FizzBuzzWithFeatureToggleTest.WhenCommonNumber*:FizzBuzzWithFeatureToggleTest.WhenMultiple*";
     }
     
     testing::InitGoogleTest(&argc, argv);
