@@ -13,6 +13,11 @@
 
 using std::string;
 
+class GameHandler {
+public:
+    virtual string handle(int number) = 0;
+};
+
 class FizzBuzzHandler {
 public:
     string handle(int number);
