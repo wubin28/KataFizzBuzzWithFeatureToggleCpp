@@ -42,8 +42,9 @@ TEST_F(FizzBuzzWithFeatureToggleTest, WhenCommonNumberThenSayItDirectly) {
     EXPECT_EQ("16", ptrFizzBuzzHandler->handle(16));
 }
 
-TEST_F(FizzBuzzWithFeatureToggleTest, When3ThenFizz) {
+TEST_F(FizzBuzzWithFeatureToggleTest, WhenMultipleOf3ThenFizz) {
     EXPECT_EQ("Fizz", ptrFizzBuzzHandler->handle(3));
+    EXPECT_EQ("Fizz", ptrFizzBuzzHandler->handle(99));
 }
 
 TEST_F(FizzBuzzWithFeatureToggleTest, When5ThenBuzz) {
