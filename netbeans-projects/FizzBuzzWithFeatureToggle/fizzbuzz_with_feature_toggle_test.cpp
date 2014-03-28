@@ -8,11 +8,11 @@ protected:
     // You can remove any or all of the following functions if its body
     // is empty.
 
-  GameHandler *ptrFizzBuzzHandler = NULL;
+  GameHandler *ptrGameHandler = NULL;
 
   FizzBuzzWithFeatureToggleTest() {
       // You can do set-up work for each test here.
-      ptrFizzBuzzHandler = new FizzBuzzHandlerProxy;
+      ptrGameHandler = new FizzBuzzHandlerProxy;
   }
 
   virtual ~FizzBuzzWithFeatureToggleTest() {
