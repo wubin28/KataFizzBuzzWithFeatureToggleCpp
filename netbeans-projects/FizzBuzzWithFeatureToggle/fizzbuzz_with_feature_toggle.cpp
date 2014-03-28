@@ -1,7 +1,7 @@
 #include "fizzbuzz_with_feature_toggle.h"
 
 string FizzBuzzHandler::handle(int number) {
-    if (number == 15) {
+    if (number % 15 == 0) {
         return "FizzBuzz";
     }
     if (number % 3 == 0) {
