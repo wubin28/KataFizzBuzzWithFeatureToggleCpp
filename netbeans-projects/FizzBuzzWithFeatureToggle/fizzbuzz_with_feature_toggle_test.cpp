@@ -63,13 +63,13 @@ TEST_F(FizzBuzzWithFeatureToggleTest, GivenBodyMovementIsOnWhenMultipleOf3ThenFi
 }
 
 TEST_F(FizzBuzzWithFeatureToggleTest, GivenBodyMovementIsOnWhenMultipleOf5ThenBuzzAndTouchShoulder) {
-    EXPECT_EQ("FizzAndTouchShoulder", ptrGameHandler->handle(5));
-    EXPECT_EQ("FizzAndTouchShoulder", ptrGameHandler->handle(100));
+    EXPECT_EQ("BuzzAndTouchShoulder", ptrGameHandler->handle(5));
+    EXPECT_EQ("BuzzAndTouchShoulder", ptrGameHandler->handle(100));
 }
 
 TEST_F(FizzBuzzWithFeatureToggleTest, GivenBodyMovementIsOnWhenMultipleOf15ThenFizzAndTouchKnee) {
-    EXPECT_EQ("FizzAndTouchKnee", ptrGameHandler->handle(15));
-    EXPECT_EQ("FizzAndTouchKnee", ptrGameHandler->handle(90));
+    EXPECT_EQ("FizzBuzzAndTouchKnee", ptrGameHandler->handle(15));
+    EXPECT_EQ("FizzBuzzAndTouchKnee", ptrGameHandler->handle(90));
 }
 
 }  // namespace

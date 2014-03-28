@@ -5,7 +5,16 @@ FizzBuzzHandlerProxy::FizzBuzzHandlerProxy(FizzBuzzHandler *ptrFizzBuzzHandler) 
 }
 
 string FizzBuzzHandlerProxy::handle(int number) {
-    return "FizzAndTouchHead";
+    if (number % 15 == 0) {
+        return "FizzBuzzAndTouchKnee";
+    }
+    if (number % 3 == 0) {
+        return "FizzAndTouchHead";
+    }
+    if (number % 5 == 0) {
+        return "BuzzAndTouchShoulder";
+    }
+    return std::to_string(number);
 }
 
 string FizzBuzzHandler::handle(int number) {
