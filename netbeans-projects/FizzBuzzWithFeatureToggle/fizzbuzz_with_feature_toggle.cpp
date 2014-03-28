@@ -1,5 +1,9 @@
 #include "fizzbuzz_with_feature_toggle.h"
 
+FizzBuzzHandlerProxy::FizzBuzzHandlerProxy(FizzBuzzHandler *ptrFizzBuzzHandler) {
+    this->ptrFizzBuzzHandler = ptrFizzBuzzHandler;
+}
+
 string FizzBuzzHandlerProxy::handle(int number) {
     return "FizzAndTouchHead";
 }
