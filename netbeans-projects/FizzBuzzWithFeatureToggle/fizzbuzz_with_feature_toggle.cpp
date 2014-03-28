@@ -1,5 +1,9 @@
 #include "fizzbuzz_with_feature_toggle.h"
 
+string FizzBuzzHandlerProxy::handle(int number) {
+    return "FizzAndTouchHead";
+}
+
 string FizzBuzzHandler::handle(int number) {
     if (number % 15 == 0) {
         return "FizzBuzz";
