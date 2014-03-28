@@ -17,5 +17,10 @@ class FizzBuzzHandler {
 public:
     string handle(int number);
 };
+
+class FizzBuzzHandlerProxy : public GameHandler {
+public:
+    string handle(int number) override;
+};
 #endif	/* FIZZBUZZ_WITH_FEATURE_TOGGLE_H */
 
