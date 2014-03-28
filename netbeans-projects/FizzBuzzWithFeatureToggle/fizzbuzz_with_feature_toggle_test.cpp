@@ -8,7 +8,7 @@ protected:
     // You can remove any or all of the following functions if its body
     // is empty.
 
-  FizzBuzzHandler *ptrFizzBuzzHandler = NULL;
+  GameHandler *ptrFizzBuzzHandler = NULL;
 
   FizzBuzzWithFeatureToggleTest() {
       // You can do set-up work for each test here.
