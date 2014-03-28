@@ -57,12 +57,17 @@ TEST_F(FizzBuzzWithFeatureToggleTest, WhenMultipleOf15ThenFizzBuzz) {
     EXPECT_EQ("FizzBuzz", ptrFizzBuzzHandler->handle(90));
 }
 
+TEST_F(FizzBuzzWithFeatureToggleTest, GivenBodyMovementIsOnWhenMultipleOf3ThenFizzAndTouchHead) {
+    EXPECT_EQ("FizzAndTouchHead", ptrFizzBuzzHandler->handle(3));
+    EXPECT_EQ("FizzAndTouchHead", ptrFizzBuzzHandler->handle(99));
+}
+
 }  // namespace
 
 
 GTEST_API_ int main(int argc, char **argv) {
   printf("Running main() from gtest_main.cc\n");
-  testing::GTEST_FLAG(filter) = "FizzBuzzWithFeatureToggleTest.When*";
+  testing::GTEST_FLAG(filter) = "FizzBuzzWithFeatureToggleTest.GivenBodyMovement*";
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
 }
