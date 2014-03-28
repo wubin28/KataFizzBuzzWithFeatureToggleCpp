@@ -12,8 +12,7 @@ protected:
 
   FizzBuzzWithFeatureToggleTest() {
       // You can do set-up work for each test here.
-      FizzBuzzHandler fizzBuzzHandler;
-      ptrFizzBuzzHandler = &fizzBuzzHandler;
+      ptrFizzBuzzHandler = new FizzBuzzHandler;
   }
 
   virtual ~FizzBuzzWithFeatureToggleTest() {
