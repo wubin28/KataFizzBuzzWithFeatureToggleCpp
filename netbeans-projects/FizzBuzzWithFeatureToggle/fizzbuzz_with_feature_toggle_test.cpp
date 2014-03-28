@@ -66,8 +66,13 @@ TEST_F(FizzBuzzWithFeatureToggleTest, GivenBodyMovementIsOnWhenMultipleOf3ThenFi
 
 
 GTEST_API_ int main(int argc, char **argv) {
-  printf("Running main() from gtest_main.cc\n");
-  testing::GTEST_FLAG(filter) = "FizzBuzzWithFeatureToggleTest.GivenBodyMovement*";
-  testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
+    printf("Running main() from gtest_main.cc\n");
+    if (GameHandler::isBodyMovementFeatureToggleOn) {
+        testing::GTEST_FLAG(filter) = "FizzBuzzWithFeatureToggleTest.GivenBodyMovement*";
+    } else {
+        testing::GTEST_FLAG(filter) = "FizzBuzzWithFeatureToggleTest.When*";
+    }
+    
+    testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }
