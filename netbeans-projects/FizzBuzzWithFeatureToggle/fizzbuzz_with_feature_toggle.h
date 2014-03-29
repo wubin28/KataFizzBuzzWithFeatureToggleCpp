@@ -16,12 +16,12 @@ using std::string;
 class GameHandler {
 public:
     virtual string handle(int number) = 0;
-    static const bool isBodyMovementFeatureToggleOn = 0;
+    static const bool isBodyMovementFeatureToggleOn = 1;
 };
 
-class FizzBuzzHandler {
+class FizzBuzzHandler : public GameHandler {
 public:
-    string handle(int number);
+    string handle(int number) override;
 };
 
 class FizzBuzzHandlerProxy : public GameHandler {
